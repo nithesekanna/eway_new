@@ -1,0 +1,148 @@
+/* General Styling */
+body {
+    font-family: "Roboto", sans-serif;
+    margin: 0;
+    padding: 2rem;
+    height: 250px;
+    width: 100%;
+    background: linear-gradient(141deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
+    color: white;
+    text-align: center;
+    overflow: hidden;
+}
+
+.custom-grid {
+    display: flex;
+    flex-wrap: wrap; /* Allows wrapping to the next row */
+    gap: 20px; /* Add space between columns */
+    padding: 5rem;
+  }
+  
+  .grid-column {
+    flex: 1 1 calc(33.333% - 20px); /* 3 columns layout with 20px gap */
+    box-sizing: border-box; /* Ensure padding doesn't affect width */
+    background-color: transparent;
+    padding: 20px;
+    background-color: #fff;
+    text-align: center;
+    border-radius: 1rem;
+    border-width: .5rem;
+    border-style: solid;
+    border-image: 
+      linear-gradient(
+        to top, 
+        #0fb8ad, 
+        rgba(0, 0, 0, 0)
+      ) 10 80%;
+  }
+
+  @property --angle {
+	syntax: '<angle>';
+	inherits: true;
+	initial-value: 0deg;
+}
+
+ .animate {
+	--angle: 0deg;
+	padding: 40px;
+	background: linear-gradient(white, white) padding-box, conic-gradient(from var(--angle), #0fb8ad, #2cb5e8) border-box;
+	border-width: .5rem;
+    border-style: solid;
+    border-image: 
+      linear-gradient(
+        to top, 
+        #0fb8ad, 
+        rgba(0, 0, 0, 0)
+      ) 10 80%;
+	border-radius: 16px;
+	/* max-width: 400px; */
+	animation: rotate-gradient 5s infinite linear;
+}
+
+@keyframes rotate-gradient {
+	from { --angle: 0deg; }
+	to { --angle: 360deg; }
+}
+  .grid-column-no-border {
+    flex: 1 1 calc(33.333% - 20px); /* 3 columns layout with 20px gap */
+    box-sizing: border-box; /* Ensure padding doesn't affect width */
+    background-color: transparent;
+    padding: 20px;
+    text-align: center;
+    border-radius: 5px;
+  }
+
+  .container {
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 20px 40px;
+    border-radius: 5px;
+  }
+  
+  .container h1 {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .container a {
+    text-decoration: none;
+    color: lightblue;
+  }
+  
+  .btn {
+    cursor: pointer;
+    display: inline-block;
+    width: 50%;
+    background: lightblue;
+    padding: 15px;
+    font-family: inherit;
+    font-size: 16px;
+    border: 0;
+    border-radius: 5px;
+  }
+  
+  .btn:focus {
+    outline: 0;
+  }
+  
+  .btn:active {
+    transform: scale(0.98);
+  }
+  
+  .text {
+    margin-top: 30px;
+  }
+  
+  .form-control {
+    position: relative;
+    margin: 2rem 6rem 2rem;
+    width: 300px;
+  }
+  
+  .form-control input {
+    background-color: transparent;
+    border: 0;
+    border-bottom: 2px #fff solid;
+    display: block;
+    width: 100%;
+    padding: 15px 0;
+    font-size: 18px;
+    color: #fff;
+  }
+  
+
+
+ 
+  
+  /* Responsive Adjustments */
+  @media (max-width: 768px) {
+    .grid-column {
+      flex: 1 1 calc(50% - 20px); /* 2 columns layout on smaller screens */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .grid-column {
+      flex: 1 1 100%; /* Full-width columns on very small screens */
+    }
+  }
+  
