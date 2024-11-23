@@ -2,13 +2,13 @@
 body {
     font-family: "Roboto", sans-serif;
     margin: 0;
-    padding: 2rem;
+    /* padding: 2rem; */
     height: 250px;
     width: 100%;
     background: linear-gradient(141deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
     color: white;
-    text-align: center;
-    overflow: hidden;
+    /* text-align: center; */
+    /* overflow: hidden; */
 }
 
 .custom-grid {
